@@ -5,6 +5,7 @@ I decided to create this project in javascript. Because the video instructions w
 - `originalTest.js` is the original test. 
 - `refactoredTest.js` is the refactored test.
 - `pages` folder contains the POM classes.
+- Maybe this is not correct logic, but I was taught by someone else not to hide the expects/assertions in the POM, so I kept them in the test script itself.
 
 #### Flow of the test:
 
