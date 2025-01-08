@@ -18,19 +18,6 @@ test('Choose any podcast. Verify the shareable link matches the text copied from
   
     const clipboardText = await podcast.clickOnCopyButtonAndReadClipboard(context)
 
-    
     expect(clipboardText).toEqual(linkField);
 
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});
