@@ -1,11 +1,17 @@
 # Playwright Test Refactored Using Page Objects Model 
 
-I decided to create this project in javascript. Because the video instructions were also in javascript. I tried first with typescript and got confused. 
+This repo contains a test I previously wrote and wanted to use as practice in transferring into a test that utilizes the POM classes. With the help from my mentor and this video https://www.youtube.com/watch?v=rAec3mZFhF0&t=1582s
 
+### Tech Stack 
+- Javascript
+- Node.js
+- Playwright
+
+### Files
 - `originalTest.js` is the original test. 
 - `refactoredTest.js` is the refactored test.
 - `pages` folder contains the POM classes.
-- Maybe this is not correct logic, but I was taught by someone else not to hide the expects/assertions in the POM, so I kept them in the test script itself.
+  
 
 #### Flow of the test:
 
