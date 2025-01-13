@@ -44,8 +44,9 @@ This repo contains a tests I previously wrote and wanted to use as practice in t
 8. View the cart and verify the item subtotal is correct
 9. Proceed to checkout and confirm the URL redirects to the sign-in page
 #### Video for visual reference:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0s31v-AiT58?si=1yvgFQZa2orXnPFJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Watch the video on YouTube](https://www.youtube.com/watch?v=0s31v-AiT58)
 
 # Important notes:
 - I used the `page.getByTestId` method to locate some elements.
 - `testIdAttribute: 'id'` is added in the `playwright.config.js file.`
+- DUE TO AMAZON'S ANTI BOT DETECTION, THIS PROJECT TYPICALLY FAILS IN CI :(
