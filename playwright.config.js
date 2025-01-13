@@ -18,7 +18,7 @@ module.exports = defineConfig({
   timeout: 60000,
   projects: [
     {
-      name: 'chromium',
+      name: 'chrome',
       use: { ...devices['Desktop Chrome'] },
     },
   ],

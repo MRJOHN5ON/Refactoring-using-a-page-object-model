@@ -1,6 +1,6 @@
 # Playwright Test Refactored Using Page Objects Model 
 
-This repo contains a test I previously wrote and wanted to use as practice in transferring into a test that utilizes the POM classes. With the help from my mentor and this video https://www.youtube.com/watch?v=rAec3mZFhF0&t=1582s
+This repo contains a tests I previously wrote and wanted to use as practice in transferring into a test that utilizes the POM classes. With the help from my mentor and this video https://www.youtube.com/watch?v=rAec3mZFhF0&t=1582s
 
 ### Tech Stack 
 - Javascript
@@ -8,12 +8,13 @@ This repo contains a test I previously wrote and wanted to use as practice in tr
 - Playwright
 
 ### Files
-- `originalTest.js` is the original test. 
-- `refactoredTest.js` is the refactored test.
+- `originalPodcastTest.spec.js` is the original test. 
+- `refactorPodcastTest.spec.js` is the refactored test.
 - `pages` folder contains the POM classes.
+- `2yearWarranty.spec.js` are also refactored tests, you can view the original repo containing them [here](https://github.com/MRJOHN5ON/SocialQAproject)
   
 
-#### Flow of the test:
+### Flow of the `Podcast` test:
 
 1. Go to amazon music page. 
 2. Click on the podcast section. 
@@ -32,6 +33,19 @@ This repo contains a test I previously wrote and wanted to use as practice in tr
 - `page.getByTestId("dialog").locator("input")`<img src="./screenshots/4.png">
 - `page.locator('music-button').filter({ hasText: 'Copy link' }).getByRole('button')`<img src="./screenshots/5.png">
 
-#### Important notes:
+### Flow of the `2 Year Warranty Test`
+1. Navigate to the product page
+2. Add the product to the cart
+3. Verify the 2-year warranty checkbox is visible and select it
+4. Confirm the warranty checkbox is checked
+5. Ensure the "Add Protection" button is visible and click it
+6. Verify the success message is displayed
+7. Check the cart item count is visible and matches the expected count
+8. View the cart and verify the item subtotal is correct
+9. Proceed to checkout and confirm the URL redirects to the sign-in page
+#### Video for visual reference:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0s31v-AiT58?si=1yvgFQZa2orXnPFJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Important notes:
 - I used the `page.getByTestId` method to locate some elements.
 - `testIdAttribute: 'id'` is added in the `playwright.config.js file.`
