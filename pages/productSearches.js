@@ -18,7 +18,7 @@ exports.ProductSearches = class ProductSearches {
     }
 
     async addToCart() {
-        await this.addToCartBt.click();
+        await this.addToCartBt.click({ force: true });
     }
     async clickAddProtectionBt() {
         await this.addProtectionButton.click({ force: true });
