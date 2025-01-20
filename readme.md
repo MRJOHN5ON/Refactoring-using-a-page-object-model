@@ -11,7 +11,7 @@ This repo contains a tests I previously wrote and wanted to use as practice in t
 - `originalPodcastTest.spec.js` is the original test. 
 - `refactorPodcastTest.spec.js` is the refactored test.
 - `pages` folder contains the POM classes.
-- `2yearWarranty.spec.js` are also refactored tests, you can view the original repo containing them [here](https://github.com/MRJOHN5ON/SocialQAproject)
+- `2yearWarranty.spec.js`, `addToCartDenyWarranty.spec.js` are also refactored tests, you can view the original repo containing them [here](https://github.com/MRJOHN5ON/SocialQAproject)
   
 
 ### Flow of the `Podcast` test:
