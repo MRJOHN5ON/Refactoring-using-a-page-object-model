@@ -33,13 +33,5 @@ test(`adds product from to cart, applies 2-year warranty, and verifies cart coun
     await productSearches.clickProceedToCheckoutBt();
     await expect(page).toHaveURL(/signin/);
 
-
-
-
-
-
-
-
-
-})
+});
 

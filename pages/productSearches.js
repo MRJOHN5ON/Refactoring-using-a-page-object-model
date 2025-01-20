@@ -10,11 +10,15 @@ exports.ProductSearches = class ProductSearches {
         this.viewCartBt = page.getByTestId("sw-gtc");
         this.itemSubtotal = page.getByTestId("sc-subtotal-label-activecart");
         this.proceedToCheckoutButton = page.getByTestId('desktop-ptc-button-celWidget');
+        this.noThanksButton = page.getByTestId('attachSiNoCoverage-announce');
         
     }
 
     async gotoProductWith2yearWarrantyURL() {
         await this.page.goto('https://a.co/d/3eJ17oT');
+    }
+    async gotoProductDenyWarrantyURL() {
+        await this.page.goto('https://a.co/d/a0Huxit');
     }
 
     async addToCart() {
@@ -34,6 +38,9 @@ exports.ProductSearches = class ProductSearches {
 
     async clickProceedToCheckoutBt() {
         await this.proceedToCheckoutButton.click();
+    }
+    async clickNoThanksBt() {
+        await this.noThanksButton.click({ force: true });
     }
 }
 
