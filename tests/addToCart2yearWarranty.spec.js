@@ -5,8 +5,9 @@ test(`adds product from to cart, applies 2-year warranty, and verifies cart coun
     const productSearches = new ProductSearches(page);
     const expectedCartCount = "2";
     const expectedItemSubtotal = "Subtotal (2 items):";
+    const productUrl = 'https://a.co/d/3eJ17oT';
 
-    await productSearches.gotoProductWith2yearWarrantyURL();
+    await page.goto(productUrl);
     await expect (productSearches.addToCartBt).toBeVisible();
     await productSearches.addToCart();
 

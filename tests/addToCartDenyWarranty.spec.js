@@ -6,9 +6,10 @@ test('adds product to cart, denies warranty and verifies cart count and item qua
 const productSearches = new ProductSearches(page);
 const expectedCartCount = "1";
 const expectedItemSubtotal = "Subtotal (1 item):";
+const productUrl = 'https://a.co/d/a0Huxit';
 
 
-await productSearches.gotoProductDenyWarrantyURL();
+await page.goto(productUrl);
 await expect (productSearches.addToCartBt).toBeVisible();
 await productSearches.addToCart();
 
@@ -30,6 +31,5 @@ expect(itemSubtotalText).toBe(expectedItemSubtotal);
 await expect(productSearches.proceedToCheckoutButton).toBeVisible();
 await productSearches.clickProceedToCheckoutBt();
 await expect(page).toHaveURL(/signin/);
-
 
 });

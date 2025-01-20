@@ -11,14 +11,25 @@ exports.ProductSearches = class ProductSearches {
         this.itemSubtotal = page.getByTestId("sc-subtotal-label-activecart");
         this.proceedToCheckoutButton = page.getByTestId('desktop-ptc-button-celWidget');
         this.noThanksButton = page.getByTestId('attachSiNoCoverage-announce');
+        this.searchBox = page.getByTestId("twotabsearchtextbox");
+        this.searchBt = page.getByTestId('nav-search-submit-button');
+        this.productTitle = page.getByTestId('titleSection');
+        this.ASINCustomerReviews = page.locator('#averageCustomerReviews');
         
     }
-
-    async gotoProductWith2yearWarrantyURL() {
-        await this.page.goto('https://a.co/d/3eJ17oT');
+      
+    async gotoHomePage() {
+        await this.page.goto('https://www.amazon.com/');
     }
-    async gotoProductDenyWarrantyURL() {
-        await this.page.goto('https://a.co/d/a0Huxit');
+
+    async searchForProductEnter(searchQuery) {
+        await this.searchBox.fill(searchQuery)
+        await this.searchBox.press('Enter')
+    }
+   
+    async searchForProductClick(searchQuery) {
+        await this.searchBox.fill(searchQuery)
+        await this.searchBt.click();
     }
 
     async addToCart() {
@@ -42,6 +53,8 @@ exports.ProductSearches = class ProductSearches {
     async clickNoThanksBt() {
         await this.noThanksButton.click({ force: true });
     }
+
+    
 }
 
 
