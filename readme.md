@@ -57,11 +57,11 @@ This repo contains a tests I previously wrote and wanted to use as practice in t
 
 ### Flow of the `ASINproductSearches.spec.js`
 1. Navigate to the Amazon website
-2. Search for a product using the search box
+2. Search for a product using the search box and the enter key
 3. Click on the first search result
 4. Verify the product page is displayed and save the product title
 5. Extract the ASIN number from an attribute in the customer reviews section
-6. Go back to amazon home page and search for the same product using the ASIN number
+6. Go back to amazon home page and search for the same product using the ASIN number and clicking on the search button
 7. Verifies that the product page found with the ASIN number is the same product initially searched for
 
 

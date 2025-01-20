@@ -25,8 +25,10 @@ test('search for product by ASIN retrieved from customer reviews', async ({ page
     const ASINCustomerReviews = await productSearches.ASINCustomerReviews.getAttribute('data-asin')
     expect(ASINCustomerReviews).toBeTruthy();
 
+    await productSearches.gotoHomePage();
+
     // search for the product using the asin
-    await productSearches.searchForProductEnter(ASINCustomerReviews);
+    await productSearches.searchForProductClick(ASINCustomerReviews);
 
     // click on the first product
     await page.getByRole('link', { name: productName }).first().click()
